@@ -20,13 +20,20 @@ const Router = () => {
             headerShown: false,
           }}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
+          name="Destination Search"
+          component={DestinationSearch}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
           name="Guests"
           component={Guests}
           options={{
-            title: 'How many people?',
+            headerShown: false,
           }}
-        /> */}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

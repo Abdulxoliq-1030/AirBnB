@@ -14,13 +14,52 @@ const Tab = createBottomTabNavigator();
 // create a component
 const HomeTabNavigation = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      tabBarOptions={{
+        activeTinColor: '#f15454',
+      }}>
       <Tab.Screen
         name={'Explore'}
         component={Home}
         options={{
           tabBarIcon: ({color}) => (
             <Fontisto name="search" size={25} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={'Saved'}
+        component={Home}
+        options={{
+          tabBarIcon: ({color}) => (
+            <FontAwesome name="heart-o" size={25} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={'Airbnb'}
+        component={Home}
+        options={{
+          tabBarIcon: ({color}) => (
+            <FontAwesome5 name="airbnb" size={25} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={'Message'}
+        component={Home}
+        options={{
+          tabBarIcon: ({color}) => (
+            <Feather name="message-square" size={25} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={'Profile'}
+        component={Home}
+        options={{
+          tabBarIcon: ({color}) => (
+            <EvilIcons name="user" size={25} color={color} />
           ),
         }}
       />
