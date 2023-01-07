@@ -6,7 +6,7 @@ import styles from './styles';
 // create a component
 const Guests = () => {
   const [adults, setAdults] = useState(0);
-  const [chilrden, setChildren] = useState(0);
+  const [children, setChildren] = useState(0);
   const [infants, setInfants] = useState(0);
 
   return (
@@ -19,13 +19,13 @@ const Guests = () => {
 
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Pressable
-            onPress={() => setChildren(Math.max(0, chilrden - 1))}
+            onPress={() => setChildren(Math.max(0, children - 1))}
             style={styles.button}>
             <Text style={{fontSize: 20, color: '#474747'}}>-</Text>
           </Pressable>
-          <Text style={{marginHorizontal: 20, fontSize: 16}}>{chilrden}</Text>
+          <Text style={{marginHorizontal: 20, fontSize: 16}}>{children}</Text>
           <Pressable
-            onPress={() => setChildren(chilrden + 1)}
+            onPress={() => setChildren(children + 1)}
             style={styles.button}>
             <Text style={{fontSize: 20, color: '#474747'}}>+</Text>
           </Pressable>
@@ -52,18 +52,18 @@ const Guests = () => {
       </View>
       <View style={styles.row}>
         <View>
-          <Text style={{fontWeight: 'bold'}}>Adults</Text>
-          <Text style={{color: '#8d8d8d'}}>Ages 13 or above</Text>
+          <Text style={{fontWeight: 'bold'}}>infants</Text>
+          <Text style={{color: '#8d8d8d'}}>Under 2</Text>
         </View>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Pressable
-            onPress={() => setAdults(Math.max(0, adults - 1))}
+            onPress={() => setInfants(Math.max(0, infants - 1))}
             style={styles.button}>
             <Text style={{fontSize: 20, color: '#474747'}}>-</Text>
           </Pressable>
-          <Text style={{marginHorizontal: 20, fontSize: 16}}>{adults}</Text>
+          <Text style={{marginHorizontal: 20, fontSize: 16}}>{infants}</Text>
           <Pressable
-            onPress={() => setAdults(adults + 1)}
+            onPress={() => setInfants(infants + 1)}
             style={styles.button}>
             <Text style={{fontSize: 20, color: '#474747'}}>+</Text>
           </Pressable>
