@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, StatusBar, SafeAreaView} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
-import {Home, SearchResult} from './src/screens';
+import {DestinationSearch, Home, SearchResult} from './src/screens';
 import {Post} from './src/components';
 import feed from './src/assets/data/feed';
 
@@ -15,7 +15,8 @@ const App = () => {
       <SafeAreaView>
         {/* <Home /> */}
         {/* <Post post={post2} /> */}
-        <SearchResult />
+        {/* <SearchResult /> */}
+        <DestinationSearch />
       </SafeAreaView>
     </>
   );
