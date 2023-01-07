@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Text, StyleSheet, StatusBar, SafeAreaView} from 'react-native';
-import Entypo from 'react-native-vector-icons/Entypo';
+import {StatusBar} from 'react-native';
 import {DestinationSearch, Guests, Home, SearchResult} from './src/screens';
-import {Post} from './src/components';
 import feed from './src/assets/data/feed';
+import 'react-native-gesture-handler';
+import Router from './src/navigation/router';
 
 const App = () => {
   const post1 = feed[0];
@@ -12,13 +12,7 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        {/* <Home /> */}
-        {/* <Post post={post2} /> */}
-        {/* <SearchResult /> */}
-        {/* <DestinationSearch /> */}
-        <Guests />
-      </SafeAreaView>
+      <Router />
     </>
   );
 };
