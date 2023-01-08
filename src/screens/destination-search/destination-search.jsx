@@ -1,7 +1,8 @@
 //import liraries
 import React, {useState} from 'react';
-import {View, TextInput, FlatList, Text} from 'react-native';
+import {View, TextInput, FlatList, Text, Pressable} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
+import {useNavigation} from '@react-navigation/native';
 import styles from './styles';
 
 import SearchResult from '../../assets/data/search';
@@ -9,6 +10,8 @@ import SearchResult from '../../assets/data/search';
 // create a component
 const DestinationSearch = () => {
   const [inputText, setInputText] = useState('');
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -24,12 +27,14 @@ const DestinationSearch = () => {
       <FlatList
         data={SearchResult}
         renderItem={({item}) => (
-          <View style={styles.row}>
+          <Pressable
+            onPress={() => navigation.navigate('Guests')}
+            style={styles.row}>
             <View style={styles.iconContainer}>
-              <Entypo name="location-pin" size={30} />
+              <Entypo name="location-pin" size={35} />
             </View>
             <Text style={styles.locationText}>{item.description}</Text>
-          </View>
+          </Pressable>
         )}
       />
     </View>
